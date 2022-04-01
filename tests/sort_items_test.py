@@ -3,6 +3,7 @@ from time import sleep
 from tests.test_data import TestData
 from pages.home_page import HomePage
 from pages.searched_products_list_page import SearchProductsList
+# from pages.searched_products_list_page import PricesComparison
 
 class SortItemsTestByPrice(BaseTest):
     """
@@ -39,6 +40,11 @@ class SortItemsTestByPrice(BaseTest):
 
         # 9. Wybór sortowania według ceny
         sorting_by_price = search_product_list.sorting_by_price()
+
+        sleep(5)
+
+        # 10. Pobranie cen produktów oraz sprawdzenie, czy są właściwie posortowane
+        prices_comparison = search_product_list.prices_comparison()
 
 
 
