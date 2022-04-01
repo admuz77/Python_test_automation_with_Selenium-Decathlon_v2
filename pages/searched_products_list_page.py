@@ -34,15 +34,16 @@ class SearchProductsList(BasePage):
         prices_float = map(float, get_prices)
         prices_list = list(prices_float)
         for value in prices_list:
-            print("Cena produktu: ", value)
+            print("Cena produktu sortowanego na stronie to", value)
 
         # Tworzę duplikat listy z cenami, aby go uporządkować od najmniejszej wartości do największej, a potem je porównać.
 
         verifity_prices_list = list(prices_list)
-        for verifity_value in verifity_prices_list:
-            print("Cena porównawcza produktu to ", verifity_value)
-
         (verifity_prices_list.sort())
+        for verifity_value in verifity_prices_list:
+            print("Cena produktu po weryfikacji sortowania to", verifity_value)
+
+
         assert prices_list == verifity_prices_list
 
     def _verify_page(self):

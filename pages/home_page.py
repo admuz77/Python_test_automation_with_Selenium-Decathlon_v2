@@ -10,10 +10,10 @@ class HomePage(BasePage):
     # Kliknij nie dla na popupie
     def click_no_for_popup(self):
         """
-        Click "no" in popup asking for permision to push notifications
+        Click "no" in popup asking for permission to push notifications
         """
-        el = self.driver.find_element(*HomePageLocators.NO_FOR_POPUP)
-        el.click()
+        cnfp = self.driver.find_element(*HomePageLocators.NO_FOR_POPUP)
+        cnfp.click()
         pass
 
     # Akceptuj ciasteczka
@@ -21,20 +21,18 @@ class HomePage(BasePage):
         """
         Click button "Accept and quit" (about cookies)
         """
-        el = self.driver.find_element(*HomePageLocators.ACCEPT_COOKIES)
-        el.click()
+        ac = self.driver.find_element(*HomePageLocators.ACCEPT_COOKIES)
+        ac.click()
 
     # Kliknij w pasek wyszukiwania
     def click_to_search_area(self, searched_item):
         """
         Click to the search area and search product
         """
-        el = self.driver.find_element(*HomePageLocators.CLICK_SEARCH_AREA)
+        ctsa = self.driver.find_element(*HomePageLocators.CLICK_SEARCH_AREA)
         # Fill this input with searched keys
-        el.send_keys(searched_item)
-        # input_product_name.send_keys(searched_item)
-        # Nie jestem pewna czy tam powyżej po selfie robić to product name czy inaczej odnieść,
-        # chodzi o to by pobrał z pliku csv dane
+        ctsa.send_keys(searched_item)
+        print(f'Poszukiwany przedmiot to',searched_item)
         pass
 
     # Kliknij przycisk wyszukiwania
@@ -42,8 +40,8 @@ class HomePage(BasePage):
         """
         Click search button and returns SearchProductsList Page instance
         """
-        el = self.driver.find_element(*HomePageLocators.CLICK_SEARCH_BTN)
-        el.click()
+        cs = self.driver.find_element(*HomePageLocators.CLICK_SEARCH_BTN)
+        cs.click()
         # Zwróć kolejną stronę (Searched Products List Page)
         return SearchProductsList(self.driver)
 
