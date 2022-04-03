@@ -21,3 +21,5 @@ class SearchedProductsListLocators():
     SAVE_SELECTION_ABOUT_TYPE_OF_PRODUCT = (By.XPATH, "//*[@id='start-of-listing']/div[2]/div/div")
     SORT_LIST_BTN = (By.XPATH, "//*[@id='start-of-listing']/div[1]")
     SORTING_BY_PRICE = (By.XPATH, "//*[@id='option-sort-1']/span")
+    SORTING_BY_PRICE_REVERSE = (By.XPATH, "//*[@id='option-sort-2']/span")
+    PRICES = (By.XPATH, "//*[@data-price]")
