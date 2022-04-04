@@ -73,6 +73,20 @@ class SearchProductsList(BasePage):
 
         assert prices_list == reversed_prices_list
 
+
+    def sorting_by_discount(self):
+        sbd = self.driver.find_element(*SearchedProductsListLocators.SORTING_BY_DISCOUNT)
+        sbd.click()
+
+    def discounts_comparison(self):
+        discounts = self.driver.find_elements(*SearchedProductsListLocators.DISCOUNTS)
+        get_discount = [discounts.get_attribute('prc__rate') for discount in discounts]
+        discount_float = map(float, get_discount)
+        discounts_list = list(discount_float)
+        for value in discounts_list:
+            print("Wysokość zniżki to", value)
+
+
     def _verify_page(self):
         """
         Verifity Searched Products Page

@@ -23,3 +23,6 @@ class SearchedProductsListLocators():
     SORTING_BY_PRICE = (By.XPATH, "//*[@id='option-sort-1']/span")
     SORTING_BY_PRICE_REVERSE = (By.XPATH, "//*[@id='option-sort-2']/span")
     PRICES = (By.XPATH, "//*[@data-price]")
+    SORTING_BY_DISCOUNT = (By.XPATH, "//*[@id='option-sort-3']/span")
+    # DISCOUNTS = (By.XPATH, "//*[@class='prc__rate']")
+    DISCOUNTS = By.XPATH, "//span[@class='prc__rate']"
