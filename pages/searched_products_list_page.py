@@ -80,9 +80,18 @@ class SearchProductsList(BasePage):
 
     def discounts_comparison(self):
         discounts = self.driver.find_elements(*SearchedProductsListLocators.DISCOUNTS)
-        get_discounts = [discounts.get_attribute('prc__rate') for discount in discounts]
-        discounts_float = map(float, get_discounts)
-        discounts_list = list(discounts_float)
+        get_discounts = [discount.get_attribute("innerText") for discount in discounts]
+        print(get_discounts)
+        x = ' '.join(get_discounts)
+
+        throw_away = ["−", "%"]
+        for i in x:
+            if i in throw_away:
+                x = x.replace(i,"")
+        new_discounts_list = x.split()
+        print(list(new_discounts_list))
+        discounts_int = map(int, new_discounts_list)
+        discounts_list = list(discounts_int)
         for value in discounts_list:
             print("wysokość rabatu: ", value)
 
