@@ -1,13 +1,14 @@
 from tests.base_test import BaseTest
 from time import sleep
 from tests.test_data import TestData
+from tests.assertion_tests import AssertionTests
 from pages.home_page import HomePage
 from pages.searched_products_list_page import SearchProductsList
 
 
 class SortItemsTestByPrice(BaseTest):
     """
-    Sort Items Test
+    Sort items by price Test
     """
     def test_sort_by_price(self):
         home_page = self.home_page
@@ -43,8 +44,13 @@ class SortItemsTestByPrice(BaseTest):
 
         sleep(5)
 
-        # 10. Pobranie cen produktów oraz sprawdzenie, czy są właściwie posortowane
-        prices_comparison = search_product_list.prices_comparison()
+        # 10. Pobranie cen produktów oraz sprawdzenie, czy ceny są właściwie posortowane
+        prices_comparison = AssertionTests.prices_comparison(self)
+
+
+
+
+
 
 
 

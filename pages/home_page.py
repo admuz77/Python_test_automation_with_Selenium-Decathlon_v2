@@ -1,6 +1,7 @@
 from pages.base_page import BasePage
 from pages.locators import HomePageLocators
 from pages.searched_products_list_page import SearchProductsList
+from tests.assertion_tests import AssertionTests
 
 
 class HomePage(BasePage):
