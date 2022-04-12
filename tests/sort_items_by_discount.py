@@ -1,15 +1,15 @@
 from tests.base_test import BaseTest
 from time import sleep
 from tests.test_data import TestData
-from pages.home_page import HomePage
-from pages.searched_products_list_page import SearchProductsList
+from tests.assertion_tests import AssertionTests
 
 
-class SortItemsTestByPrice(BaseTest):
+
+class SortItemsTestByDiscount(BaseTest):
     """
     Sort Items Test
     """
-    def test_sort_by_price(self):
+    def test_sort_by_discount(self):
         home_page = self.home_page
 
         # # 1. Kliknięcie "nie" w popupie dotyczącym przesyłania powiadomień - wcześniej popup był, teraz go nie ma
@@ -49,7 +49,8 @@ class SortItemsTestByPrice(BaseTest):
         sleep(5)
 
         # 10. Pobranie cen produktów oraz sprawdzenie, czy są właściwie posortowane
-        discounts_comparison = search_product_list.discounts_comparison()
+        discounts_comparison = AssertionTests.discounts_comparison(self)
+
 
 
 

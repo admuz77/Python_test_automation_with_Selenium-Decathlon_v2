@@ -1,15 +1,14 @@
 from tests.base_test import BaseTest
 from time import sleep
 from tests.test_data import TestData
-from pages.home_page import HomePage
-from pages.searched_products_list_page import SearchProductsList
-# from pages.searched_products_list_page import PricesComparison
+from tests.assertion_tests import AssertionTests
+
 
 class SortItemsTestByPriceRevers(BaseTest):
     """
     Sort Items Test. Sorting by price from the most expensive to the cheapest.
     """
-    def test_sort_by_price(self):
+    def test_sort_by_price_reverse(self):
         home_page = self.home_page
 
         # # 1. Kliknięcie "nie" w popupie dotyczącym przesyłania powiadomień - wcześniej popup był, teraz go nie ma
@@ -44,7 +43,8 @@ class SortItemsTestByPriceRevers(BaseTest):
         sleep(5)
 
         # 10. Pobranie cen produktów oraz sprawdzenie, czy są właściwie posortowane
-        prices_comparison = search_product_list.prices_comparison_reverse()
+        prices_comparison = AssertionTests.prices_comparison_reverse(self)
+
 
 
 

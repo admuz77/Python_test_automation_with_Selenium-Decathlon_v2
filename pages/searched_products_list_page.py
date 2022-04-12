@@ -32,48 +32,11 @@ class SearchProductsList(BasePage):
         sbp.click()
 
 
-    def prices_comparison_reverse(self):
-        # Tworzę listę z cenami, która uwzględnia ceny promocyjne
-        prices = self.driver.find_elements(*SearchedProductsListLocators.PRICES)
-        get_prices = [price.get_attribute("data-price") for price in prices]
-        prices_float = map(float, get_prices)
-        prices_list = list(prices_float)
-        for value in prices_list:
-            print("Cena produktu sortowanego na stronie to", value)
-
-        # Tworzę duplikat listy z cenami, aby go uporządkować od najmniejszej wartości do największej, następnie odwracam kolejność,
-        # a potem je porównuję z cenami pobranmi ze strony.
-
-        reversed_prices_list = list(prices_list)
-        (reversed_prices_list.sort())
-        (reversed_prices_list.reverse())
-        for reversed_value in reversed_prices_list:
-            print("Cena produktu po weryfikacji sortowania to", reversed_value)
-
-
-        assert prices_list == reversed_prices_list
-
-
     def sorting_by_discount(self):
         sbd = self.driver.find_element(*SearchedProductsListLocators.SORTING_BY_DISCOUNT)
         sbd.click()
 
-    def discounts_comparison(self):
-        discounts = self.driver.find_elements(*SearchedProductsListLocators.DISCOUNTS)
-        get_discounts = [discount.get_attribute("innerText") for discount in discounts]
-        print(get_discounts)
-        x = ' '.join(get_discounts)
 
-        throw_away = ["−", "%"]
-        for i in x:
-            if i in throw_away:
-                x = x.replace(i,"")
-        new_discounts_list = x.split()
-        print(list(new_discounts_list))
-        discounts_int = map(int, new_discounts_list)
-        discounts_list = list(discounts_int)
-        for value in discounts_list:
-            print("wysokość rabatu: ", value)
 
 
     def _verify_page(self):
