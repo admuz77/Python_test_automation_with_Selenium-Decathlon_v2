@@ -8,11 +8,11 @@ from pages.home_page import HomePage
 from pages.searched_products_list_page import SearchProductsList
 
 
-class MarksTest(BaseTest):
+class AddProductsTest(BaseTest):
     """
-    Checkt searching by mark of the item
+    Checkt product name added to basket
     """
-    def test_searching_by_mark(self):
+    def test_add_product_the_basket_test(self):
         home_page = self.home_page
 
         # # 1. Kliknięcie "nie" w popupie dotyczącym przesyłania powiadomień - wcześniej popup był, teraz go nie ma

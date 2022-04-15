@@ -96,5 +96,3 @@ class AssertionTests(BasePage):
         file.close()
         file2.close()
 
-
-        # wyczyszczenie pliku item_added_to_basket_at_product_page_data.txt
