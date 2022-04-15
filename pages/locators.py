@@ -45,3 +45,6 @@ class BasketPageLocators():
     """
 
     NAME_OF_THE_PRODUCT = (By.CSS_SELECTOR, "a[class^='product-name']")
+    REMOVE_PRODUCT_FROM_BASKET = (By.CSS_SELECTOR, "button[aria-label='Remove product in cart page']")
+    EMPTY_BASKET_STATEMENT = (By.XPATH, "//h2[contains(text(),'Twój koszyk jest pusty.')]")
+

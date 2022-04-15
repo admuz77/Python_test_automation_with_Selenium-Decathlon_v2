@@ -1,6 +1,7 @@
 from pages.base_page import BasePage
 from pages.locators import BasketPageLocators
 
+
 class BasketPage(BasePage):
     """
     Basket Page
@@ -12,3 +13,9 @@ class BasketPage(BasePage):
         file = open("item_in_basket_data.txt", "w")
         file.write(product_name)
         file.close()
+
+    def remove_product_from_the_basket(self):
+        rpftb = self.driver.find_element(*BasketPageLocators.REMOVE_PRODUCT_FROM_BASKET)
+        rpftb.click()
+
+

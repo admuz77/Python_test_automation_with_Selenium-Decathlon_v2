@@ -2,6 +2,7 @@ from pages.base_page import BasePage
 from pages.locators import SearchedProductsListLocators
 from pages.product_page import ProductPage
 from pages.basket_page import BasketPage
+from pages.locators import BasketPageLocators
 
 class AssertionTests(BasePage):
     """
@@ -95,4 +96,13 @@ class AssertionTests(BasePage):
 
         file.close()
         file2.close()
+
+
+    def empty_basket_assertion(self):
+        # sprawdzenie czy widnieje napis "Twój koszyk jest pusty."
+        eba = self.driver.find_element(*BasketPageLocators.EMPTY_BASKET_STATEMENT)
+        statement = eba.get_attribute("innerText")
+        print(statement)
+        assert statement == "Twój koszyk jest pusty."
+
 
