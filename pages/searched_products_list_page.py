@@ -36,6 +36,9 @@ class SearchProductsList(BasePage):
         sbd = self.driver.find_element(*SearchedProductsListLocators.SORTING_BY_DISCOUNT)
         sbd.click()
 
+    def click_first_item(self):
+        cfi = self.driver.find_element(*SearchedProductsListLocators.FIRST_ITEM)
+        cfi.click()
 
 
 

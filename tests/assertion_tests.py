@@ -1,5 +1,7 @@
 from pages.base_page import BasePage
 from pages.locators import SearchedProductsListLocators
+from pages.product_page import ProductPage
+from pages.basket_page import BasketPage
 
 class AssertionTests(BasePage):
     """
@@ -75,11 +77,24 @@ class AssertionTests(BasePage):
 
 
 
-        # reversed_prices_list = list(prices_list)
-        # (reversed_prices_list.sort())
-        # (reversed_prices_list.reverse())
-        # for reversed_value in reversed_prices_list:
-        #     print("Cena produktu po weryfikacji sortowania to", reversed_value)
-        #
-        #
-        # assert prices_list == reversed_prices_list
+    def item_name_assertion(self):
+        # pobranie nazwy przedmiotu z momentu dodawania do koszyka (pobranie nazwy z pliku item_added_to_basket_at_product_page_data.txt)
+        file = open('item_added_to_basket_at_product_page_data.txt')
+        first_name = file.read()
+        print(f'asercja:', first_name)
+
+        # pobranie nazwy przedmiotu z koszyka
+        file2 = open('item_in_basket_data.txt')
+        second_name = file2.read()
+        # second_name = BasketPage.get_name_of_the_product_in_the_basket(self)
+        print(f'asercja2:', second_name)
+
+        # porównanie nazw przedmiowów
+
+        assert first_name == second_name
+
+        file.close()
+        file2.close()
+
+
+        # wyczyszczenie pliku item_added_to_basket_at_product_page_data.txt

@@ -4,5 +4,5 @@ class TestData():
     """
     List of searched products
     """
-    products = open("products.csv").readlines()
+    products = open("searched_products_data.csv").readlines()
     searched_item = (products[random.randrange(len(products))])

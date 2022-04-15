@@ -11,6 +11,7 @@ class HomePageLocators():
     CLICK_SEARCH_BTN = (By.XPATH, "//button[@tabindex='1']")
 
 
+
 class SearchedProductsListLocators():
     """
     Locators used on Searched Products List Page
@@ -24,5 +25,23 @@ class SearchedProductsListLocators():
     SORTING_BY_PRICE_REVERSE = (By.XPATH, "//*[@id='option-sort-2']/span")
     PRICES = (By.XPATH, "//*[@data-price]")
     SORTING_BY_DISCOUNT = (By.XPATH, "//*[@id='option-sort-3']/span")
-    # DISCOUNTS = (By.XPATH, "//*[@class='prc__rate']")
     DISCOUNTS = (By.XPATH, "//span[@class='prc__rate']")
+    # FIRST_ITEM = (By.XPATH, "//div[@class='prc__cartridge']")
+    FIRST_ITEM =(By.XPATH, "//div[2]/div//strong")
+
+
+
+class ProductPageLocators():
+    """
+    Locators used at Product Cart
+    """
+    GET_NAME_OF_THE_ITEM = (By.XPATH, "//h1")
+    ADD_TO_BASKET = (By.XPATH, "//*[@id='fitAnalytics-pdp-add-to-cart']")
+    GO_TO_BASKET = (By.XPATH, "//span[. = 'Koszyk']")
+
+class BasketPageLocators():
+    """
+    Locators used at Bascet Page
+    """
+
+    NAME_OF_THE_PRODUCT = (By.CSS_SELECTOR, "a[class^='product-name']")
