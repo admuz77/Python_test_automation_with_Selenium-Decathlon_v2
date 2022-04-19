@@ -4,8 +4,7 @@ from tests.test_data import TestData
 from pages.product_page import ProductPage
 from pages.basket_page import BasketPage
 from tests.assertion_tests import AssertionTests
-from pages.home_page import HomePage
-from pages.searched_products_list_page import SearchProductsList
+
 
 
 class AddProductsTest(BaseTest):

@@ -2,8 +2,6 @@ from tests.base_test import BaseTest
 from time import sleep
 from tests.test_data import TestData
 from tests.assertion_tests import AssertionTests
-from pages.home_page import HomePage
-from pages.searched_products_list_page import SearchProductsList
 
 
 class SortItemsTestByPrice(BaseTest):

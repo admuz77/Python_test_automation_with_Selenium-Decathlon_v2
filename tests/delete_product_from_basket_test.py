@@ -37,8 +37,11 @@ class DeleteProductsFromBasketTest(BaseTest):
         # 7. Wejście do koszyka
         go_to_basket = ProductPage.go_to_basket(self)
 
-        # 8. Usunięcie przedmiotu z koszyka
+        # 8. Sprawdzenie jaki przedmiot znajduje się w koszyku
+        what_is_in_the_basket = BasketPage.get_name_of_the_product_in_the_basket(self)
+
+        # 9. Usunięcie przedmiotu z koszyka
         remove_product_from_the_basket = BasketPage.remove_product_from_the_basket(self)
 
-        # 9. Sprawdzenie czy koszyk jest pusty
+        # 10. Sprawdzenie czy koszyk jest pusty
         empty_basket_assertion = AssertionTests.empty_basket_assertion(self)
