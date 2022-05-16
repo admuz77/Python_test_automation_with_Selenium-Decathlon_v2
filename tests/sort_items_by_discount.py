@@ -3,8 +3,7 @@ from time import sleep
 from tests.test_data import TestData
 from tests.assertion_tests import AssertionTests
 
-
-
+# TC-3
 class SortItemsTestByDiscount(BaseTest):
     """
     Sort Items Test

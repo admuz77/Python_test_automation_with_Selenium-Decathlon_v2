@@ -5,8 +5,7 @@ from pages.product_page import ProductPage
 from pages.basket_page import BasketPage
 from tests.assertion_tests import AssertionTests
 
-
-
+# TC-4
 class AddProductsTest(BaseTest):
     """
     Checkt product name added to basket

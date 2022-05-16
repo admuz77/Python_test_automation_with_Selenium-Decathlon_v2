@@ -5,8 +5,7 @@ from pages.product_page import ProductPage
 from pages.basket_page import BasketPage
 from tests.assertion_tests import AssertionTests
 
-
-
+# TC-5
 class DeleteProductsFromBasketTest(BaseTest):
     """
     Delete one product from the basket. From that moment basket should be empty.

@@ -3,7 +3,7 @@ from time import sleep
 from tests.test_data import TestData
 from tests.assertion_tests import AssertionTests
 
-
+# TC-2
 class SortItemsTestByPriceRevers(BaseTest):
     """
     Sort Items Test. Sorting by price from the most expensive to the cheapest.
