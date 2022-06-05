@@ -10,7 +10,6 @@ Used frameworks, libraries, tools:
 * Python 3.8.10
 * Selenium 4.1.0
 * Pytest 7.1.1
-* Works on Chrome 102.0.5005.61
 
 Other:
 * Data Driven Testing
