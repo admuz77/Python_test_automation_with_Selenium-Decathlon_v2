@@ -1,15 +1,16 @@
 # Project: Python test automation with Selenium framework
 
 ## General info
-5 tests for website: www.decathlon.pl
+5 test cases for website: www.decathlon.pl
 
 The main goal of tests is to check the correctness of product sorting and correctness of adding products to the cart.
 
 ## Technologies
-Used frameworks, libraries:
+Used frameworks, libraries, tools:
 * Python 3.8.10
 * Selenium 4.1.0
 * Pytest 7.1.1
+* Works on Chrome 102.0.5005.61
 
 Other:
 * Data Driven Testing
