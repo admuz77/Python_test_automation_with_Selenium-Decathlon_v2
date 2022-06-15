@@ -6,20 +6,20 @@ from tests.add_product_to_basket_test import AddProductsTest
 from tests.delete_product_from_basket_test import DeleteProductsFromBasketTest
 
 # Pobieram testy, które chcę uruchomić
-sort_items_by_price_test = unittest.TestLoader().loadTestsFromTestCase(SortItemsTestByPrice)
-sort_items_by_price_revers_test = unittest.TestLoader().loadTestsFromTestCase(SortItemsTestByPriceRevers)
-sort_items_by_discount_test = unittest.TestLoader().loadTestsFromTestCase(SortItemsTestByDiscount)
-add_product_to_basket_test = unittest.TestLoader().loadTestsFromTestCase(AddProductsTest)
-delete_product_from_basket_test = unittest.TestLoader().loadTestsFromTestCase(DeleteProductsFromBasketTest)
+test_sort_by_price = unittest.TestLoader().loadTestsFromTestCase(SortItemsTestByPrice)
+test_sort_by_price_reverse = unittest.TestLoader().loadTestsFromTestCase(SortItemsTestByPriceRevers)
+test_sort_by_discount = unittest.TestLoader().loadTestsFromTestCase(SortItemsTestByDiscount)
+test_add_product_the_basket = unittest.TestLoader().loadTestsFromTestCase(AddProductsTest)
+test_delete_product_from_basket = unittest.TestLoader().loadTestsFromTestCase(DeleteProductsFromBasketTest)
 
 
 # Lista testów do uruchomienia
 tests_for_run = [
-    sort_items_by_price_test,
-    sort_items_by_price_revers_test,
-    sort_items_by_discount_test,
-    add_product_to_basket_test,
-    delete_product_from_basket_test
+    test_sort_by_price,
+    test_sort_by_price_reverse,
+    test_sort_by_discount,
+    test_add_product_the_basket,
+    test_delete_product_from_basket
 ]
 
 # Stwórz Test Suitę łącząc testy

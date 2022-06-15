@@ -25,15 +25,18 @@ class SearchedProductsListLocators():
     PRICES = (By.XPATH, "//*[@data-price]")
     SORTING_BY_DISCOUNT = (By.XPATH, "//*[@id='option-sort-3']/span")
     DISCOUNTS = (By.XPATH, "//span[@class='prc__rate']")
-    FIRST_ITEM =(By.XPATH, "//div[2]/div//strong")
+    FIRST_ITEM = (By.XPATH, "//div[2]/div//strong")
+    ALL_FILTERS = (By.XPATH, "//span[text()='Wszystkie filtry']")
 
 
 class ProductPageLocators():
     """
     Locators used at Product Cart
     """
+
     GET_NAME_OF_THE_ITEM = (By.XPATH, "//h1")
     ADD_TO_BASKET = (By.XPATH, "//*[@id='fitAnalytics-pdp-add-to-cart']")
+    # ADD_TO_BASKET = (By.XPATH, "//*[contains(text(), ”Dodaj do koszyka”)]")
     GO_TO_BASKET = (By.XPATH, "//span[. = 'Koszyk']")
 
 

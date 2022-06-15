@@ -23,24 +23,31 @@ class DeleteProductsFromBasketTest(BaseTest):
 
         # 3. Kliknięcie w pole wyszukiwania i wpisanie nazwy produktu
         home_page.click_to_search_area(TestData.searched_item)
+        sleep(3)
 
         # 4. Kliknięcie wyszukiwania
         search_product_list = home_page.click_search()
+        sleep(3)
 
         # 5. Wybranie pierwszego przedmiotu z wyświetlonej listy wyszukanych przedmiotów
         first_item_click = search_product_list.click_first_item()
+        sleep(5)
 
         # 6. Dodanie przedmiotu do koszyka
         add_product = ProductPage.add_product_to_basket(self)
+        sleep(3)
 
         # 7. Wejście do koszyka
         go_to_basket = ProductPage.go_to_basket(self)
+        sleep(5)
 
         # 8. Sprawdzenie jaki przedmiot znajduje się w koszyku
         what_is_in_the_basket = BasketPage.get_name_of_the_product_in_the_basket(self)
+        sleep(3)
 
         # 9. Usunięcie przedmiotu z koszyka
         remove_product_from_the_basket = BasketPage.remove_product_from_the_basket(self)
+        sleep(3)
 
         # 10. Sprawdzenie czy koszyk jest pusty
         empty_basket_assertion = AssertionTests.empty_basket_assertion(self)

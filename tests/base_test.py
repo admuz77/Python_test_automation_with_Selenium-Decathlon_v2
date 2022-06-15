@@ -12,10 +12,11 @@ class BaseTest(unittest.TestCase):
         self.options = Options()
         self.options.add_argument("--disable-notifications")
         self.driver = webdriver.Chrome(options=self.options)
+        # self.driver = webdriver.Firefox()
         self.driver.maximize_window()
         self.driver.get("https://www.decathlon.pl/")
         self.home_page = HomePage(self.driver)
-        self.driver.implicitly_wait(8)
+        self.driver.implicitly_wait(15)
 
 
     def tearDown(self):
