@@ -22,9 +22,9 @@ TC-2: Sorting products by price (from the highest)
 
 TC-3: Sorting products by discount (from the highest)
 
-TC-4: Adding product to the basket/cart
+TC-4: Adding product to the cart
 
-TC-5: Deleting product from the basket/cart
+TC-5: Deleting product from the cart
 
 ## Runing tests
 You can run the tests separately or run all tests using run_tests.py
